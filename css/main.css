@@ -143,7 +143,7 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 1.6rem 0;
-  color: #F7997D;
+  color: #f38c6a;
   height: 3rem;
   width: 3rem;
 }
@@ -160,11 +160,27 @@ body {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 51rem) {
+  .aside__heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.6rem;
+  }
+}
+
 .aside__heading button {
   border: none;
   background: none;
   color: #f8f9fa;
-  background-color: #DC7035;
+  background-color: #F7845E;
   padding: 1.2rem 2.4rem;
   border-radius: 2.4rem;
 }
@@ -173,7 +189,7 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 20em) {
+@media only screen and (max-width: 51em) {
   .aside__heading button {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -221,13 +237,13 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  color: #F7997D;
+  color: #f38c6a;
   z-index: 100;
 }
 
 .aside__heading .profile .profile__icon[name="chevron-down-circle-outline"] {
-  color: #DC7035;
-  background-color: #ECDBC9;
+  color: #F7845E;
+  background-color: #ebe3d7;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -255,6 +271,13 @@ body {
   gap: 1.2rem;
 }
 
+@media only screen and (max-width: 51rem) {
+  .aside__imgs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .aside__imgs img,
 .aside__imgs span {
   width: 4.4rem;
@@ -263,8 +286,8 @@ body {
 }
 
 .aside__imgs span {
-  color: #DC7035;
-  background-color: #ECDBC9;
+  color: #F7845E;
+  background-color: #ebe3d7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,10 +300,10 @@ body {
 }
 
 .aside__imgs .aside__icon {
-  color: #DC7035;
-  background-color: #ECDBC9;
+  color: #F7845E;
+  background-color: #ebe3d7;
   font-size: 2.4rem;
-  border: 3px dotted #DC7035;
+  border: 3px dotted #F7845E;
   border-radius: 50%;
 }
 
@@ -305,10 +328,39 @@ body {
   border-radius: 2.4rem;
 }
 
+@media only screen and (max-width: 45.31rem) {
+  .aside__stats .time,
+  .aside__stats .progress,
+  .aside__stats .finished {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .aside__stats .time p,
 .aside__stats .progress p,
 .aside__stats .finished p {
   font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 51rem) {
+  .aside__stats {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 45.31rem) {
+  .aside__stats {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .aside .projects__heading {
@@ -326,7 +378,7 @@ body {
 }
 
 .aside .projects__heading span {
-  color: #DC7035;
+  color: #F7845E;
 }
 
 .aside .projects__heading span:hover {
@@ -341,6 +393,13 @@ body {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   gap: 1.8rem;
+}
+
+@media only screen and (max-width: 51rem) {
+  .aside__tasks {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 @media only screen and (max-width: 22em) {
@@ -382,15 +441,15 @@ body {
 }
 
 .aside__tasks .task__heading #red {
-  color: #F7997D;
+  color: #D24E26;
 }
 
 .aside__tasks .task__heading #green {
-  color: #63e6be;
+  color: #48A99C;
 }
 
 .aside__tasks .task__heading .square-icon {
-  color: #EDC596;
+  color: #ECCB9B;
 }
 
 .aside__tasks .task span {
@@ -405,7 +464,7 @@ body {
 }
 
 .aside__tasks .task--1 {
-  background-color: #ECDBC9;
+  background-color: #ebe3d7;
   padding: 1.8rem;
   position: relative;
 }
@@ -423,7 +482,7 @@ body {
 
 .aside__tasks .task--4 {
   color: #f8f9fa;
-  background-color: #DC7035;
+  background-color: #F7845E;
 }
 
 .dashboard {
@@ -478,7 +537,7 @@ body {
 .dashboard form input {
   color: #adb5bd;
   width: 100%;
-  border: 2px solid #ECDBC9;
+  border: 2px solid #ebe3d7;
   padding: .8rem .8rem .8rem 3.6rem;
   border-radius: 2.4rem;
   background-color: #f8f9fa;
@@ -501,7 +560,7 @@ body {
 }
 
 .dashboard .projects__heading span {
-  color: #DC7035;
+  color: #F7845E;
 }
 
 .dashboard .projects__heading span:hover {
@@ -635,16 +694,16 @@ body {
 }
 
 .dashboard__cards #card--red {
-  background-color: #F7997D;
+  background-color: #f38c6a;
 }
 
 .dashboard__cards #card--orange {
-  background-color: #EDC596;
+  background-color: #ECCB9B;
 }
 
 .dashboard .reminder {
   padding: 2.4rem;
-  border: 1px solid #ECDBC9;
+  border: 1px solid #ebe3d7;
   border-radius: 2.4rem;
 }
 
@@ -684,7 +743,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  border: 1px dotted #DC7035;
+  border: 1px dotted #F7845E;
   background: none;
   border-radius: 2.4rem;
   padding: .8rem;
@@ -699,6 +758,12 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/ 2;
+}
+
+@media only screen and (max-width: 64em) {
+  .nav {
+    background-color: #ebe3d7;
+  }
 }
 
 @media only screen and (max-width: 51em) {
@@ -742,6 +807,15 @@ body {
           justify-content: center;
 }
 
+@media only screen and (max-width: 51em) {
+  .nav__icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -770,8 +844,7 @@ body {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    color: #f8f9fa;
-    background-color: #212529;
+    background-color: #ebe3d7;
   }
 }
 
@@ -832,8 +905,16 @@ body {
   padding: 1.4rem;
 }
 
+@media only screen and (max-width: 51em) {
+  .nav__icons .nav__icon {
+    padding: 1rem;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
 .nav__icons .nav__icon.selected {
-  background-color: #ECDBC9;
+  background-color: #ebe3d7;
 }
 
 @media only screen and (max-width: 51em) {
@@ -848,8 +929,6 @@ body {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    color: #f8f9fa;
-    background-color: #212529;
   }
 }
 
@@ -857,7 +936,7 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/ 3;
-  background-color: #ECDBC9;
+  background-color: #ebe3d7;
   padding: 2.4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
