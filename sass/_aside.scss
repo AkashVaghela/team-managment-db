@@ -33,6 +33,13 @@
         align-items: center;
         justify-content: space-between;
 
+        @media only screen and (max-width: 51rem){
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            gap: 1.6rem;
+        }
+
         button {
             border: none;
             background: none;
@@ -45,7 +52,7 @@
             }
         
 
-            @media only screen and (max-width: 20em){
+            @media only screen and (max-width: 51em){
                 order: 1;
             }
 
@@ -114,6 +121,10 @@
         align-items: center;
         gap: 1.2rem;
 
+        @media only screen and (max-width: 51rem){
+            flex-wrap: wrap;
+        }
+
         img,
         span {
             width: 4.4rem;
@@ -151,10 +162,28 @@
         gap: 1.4rem;
         border-radius: 2.4rem;
 
+        .time,
+        .progress,
+        .finished {
+            @media only screen and (max-width: 45.31rem){
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
         .time p,
         .progress p,
         .finished p {
             font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width: 51rem){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 45.31rem){
+            grid-template-columns: 1fr;
         }
     }
 
@@ -178,6 +207,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 1.8rem;
+
+        @media only screen and (max-width: 51rem){
+            grid-template-columns: 1fr;
+        }
 
         @media only screen and (max-width: 22em){
             grid-template-columns: 1fr;
