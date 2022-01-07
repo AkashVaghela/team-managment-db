@@ -1,0 +1,43 @@
+.menu {
+    grid-column: 2/ 3;
+    background-color: $color-brown-light;
+    padding: 2.4rem 0;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 64em){
+        display: none;
+    }
+
+    &__heading {
+        padding: 0 2.4rem 1.6rem;
+        border-bottom: 1px solid $color-gray;
+    }
+
+    &__heading p {
+        font-size: 1.4rem;
+    }
+
+    &__options {
+        padding: 0 2.4rem;
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .option:hover {
+            cursor: pointer;
+        }
+
+        .menu__items {
+            list-style-type: none;
+        }
+
+        .menu__items li {
+            padding: .4rem 0;
+            cursor: pointer;
+            padding-left: 2.4rem;
+        }
+    }
+}

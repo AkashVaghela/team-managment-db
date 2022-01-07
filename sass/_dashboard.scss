@@ -1,0 +1,204 @@
+.dashboard {
+    grid-column: 3/ 4;
+    padding: 2.4rem;
+    height: 100%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media only screen and (max-width: 64em){
+        grid-column: 2/ 4;
+    }
+
+    @media only screen and (max-width: 51em){
+        // grid-row: 1/ 2;
+        grid-column: 1/ 4;
+    }
+
+    @media only screen and (max-width: 35em){
+        grid-row: 1/ 2;
+        grid-column: 1/ -1;
+    }
+
+    form {
+
+        margin-left: 1.4rem;
+
+        .search__btn {
+            cursor: pointer;
+            border: none;
+            background-color: $color-white;
+            margin: 0 -3rem 0 0;
+        }
+
+        input {
+            color: $color-gray;
+            width: 100%;
+            border: 2px solid $color-brown-light;
+            padding: .8rem .8rem .8rem 3.6rem;
+            border-radius: 2.4rem;
+            background-color: $color-white;
+            
+            &:focus {
+                border: none;
+            }
+        }
+    }
+
+    .projects__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: $color-red-dark;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__cards {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.4rem;
+
+        @media only screen and (max-width: 43em){
+            grid-template-columns: 1fr;
+            gap: 1.4rem;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 2.4rem;
+        }
+
+        .card {
+            border-radius: 2.4rem;
+            padding: 4.8rem 2.4rem;
+            box-shadow: 2rem 2rem 8rem rgba(0, 0, 0, .1);
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                box-shadow: $box-shadow;
+                transform: translateY(-.6rem);
+                transition: all .4s;
+            }
+
+            &__top {
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 0 0 auto;
+
+                .card__imgs {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .card__imgs #2{
+                        color: $color-black;
+                        background-color: $color-orange-light;
+                        border: 1px solid $color-black;
+                    }
+                
+
+                .card__imgs span {
+                    font-size: 1.4rem;
+                    border-radius: 50%;
+                    color: $color-white;
+                    background-color: $color-black;
+                    padding: .8rem;
+                    z-index: 100;
+                }
+
+                .card__imgs img {
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    border-radius: 50%;
+                    margin-left: -1.4rem;
+                    border: 1px solid $color-white;
+
+                    &[src="img/2.jpeg"],
+                    &[src="img/4.jpeg"]{
+                        z-index: 50;
+                    }
+                }   
+            }
+
+            &__text {
+                text-align: left;
+                flex: 14rem 0 0;
+                padding-bottom: 4.8rem;
+                
+                p {
+                    font-size: 1.4rem;
+                }
+                    
+        @media only screen and (max-width: 43em){
+            margin-bottom: 1.4rem;
+        }
+                
+            }
+
+            .card__progress {
+                flex: 0 0 auto;
+                progress {
+                    width: 100%;
+
+                    &::-webkit-progress-value {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+
+        #card--red {
+            background-color: $color-red;
+        }
+
+        #card--orange {
+            background-color: $color-orange;
+        }
+    }
+
+    .reminder {
+        padding: 2.4rem;
+        border: 1px solid $color-brown-light;
+        border-radius: 2.4rem;
+
+        .time {
+            color: $color-gray;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        &__text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4.8rem;
+
+            @media only screen and (max-width: 47.625em){
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.4rem;
+            }
+        }
+
+        button {
+            flex: 1 0 auto;
+            border: 1px dotted $color-red-dark;
+            background: none;
+            border-radius: 2.4rem;
+            padding: .8rem;
+            font-size: 1.2rem;
+            &:hover {
+                cursor: pointer;
+            }
+        
+        }
+    }
+}
